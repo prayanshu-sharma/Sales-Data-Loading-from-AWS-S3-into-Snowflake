@@ -85,10 +85,10 @@ SELECT * FROM SALES;
 You should see:
 
 ORDER_ID	ORDER_DATE	CUSTOMER_NAME	PRODUCT	QUANTITY	PRICE
-1001	2025-09-01	John Doe	Laptop	2	1200
-1002	2025-09-02	Jane Smith	Mouse	5	25
-1003	2025-09-03	David Lee	Keyboard	3	45
-1004	2025-09-04	Amy Brown	Monitor	1	300
+1001	    2025-09-01	John Doe	    Laptop	  2	        1200
+1002	    2025-09-02	Jane Smith	    Mouse	  5	        25
+1003	    2025-09-03	David Lee	   Keyboard	  3	        45
+1004	    2025-09-04	Amy Brown	    Monitor	  1	        300
 
 
 Step 8: Transform & Query Data
@@ -111,6 +111,7 @@ COPY INTO SALES
 FROM @S3_STAGE
 FILE_FORMAT = (TYPE=CSV FIELD_OPTIONALLY_ENCLOSED_BY='"' SKIP_HEADER=1)
 ON_ERROR = 'CONTINUE';
+
 You would then configure S3 event notifications to trigger this Snowpipe.
 
 
