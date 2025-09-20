@@ -117,7 +117,11 @@ You would then configure S3 event notifications to trigger this Snowpipe.
 
 Conclusion-
 Creating databases, schemas, tables in Snowflake
+
 Creating stages to connect with S3
+
 Using COPY INTO to load data
+
 Running basic transformations (aggregation, grouping)
+
 (Optional) Setting up Snowpipe for real-time ingestion
